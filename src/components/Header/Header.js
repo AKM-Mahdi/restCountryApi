@@ -18,7 +18,7 @@ const Header = () => {
             <br />
             <span>Website: https://restcountries.com/</span>
             <br />
-            <span>Api link: https://restcountries.com/v2/all</span>
+            <span>Api link: https://restcountries.com/v3.1/all</span>
           </div>
           <div className="right">
             <Search></Search>
