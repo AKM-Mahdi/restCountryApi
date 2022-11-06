@@ -1,23 +1,27 @@
-import React, { useState } from "react";
+import { Form, useNavigate } from "react-router-dom";
 
 const Search = () => {
-  // const [query, setQuery] = useState("");
+  const navigate = useNavigate("/");
 
-  // const searchCountries = () => {
-  //   // return data.filter((item) => item.name.toLowerCase().includes(query));
-  //   var countySe = query;
-  //   return countySe;
-  // };
+  const handleUserInput = (event) => {
+    event.preventDefault();
+    const input = event.target.text.value;
+    console.log(input);
+    navigate(`/${input}`);
+  };
 
   return (
     <div>
-      <input
-        type="text"
-        id="search"
-        class="form-control"
-        placeholder="Search country"
-        onChange={(e) => e.target.value}
-      ></input>
+      <Form onSubmit={handleUserInput}>
+        <input
+          type="text"
+          id="search"
+          name="text"
+          className="form-control"
+          placeholder="Search country"
+          onChange={(e) => e.target.value}
+        ></input>
+      </Form>
     </div>
   );
 };

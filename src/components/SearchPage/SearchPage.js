@@ -1,21 +1,19 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-
 import Country from "../Country/Country";
-import "./Countries.css";
 
-const Countries = () => {
-  const countries = useLoaderData();
-
+const SearchPage = () => {
+  const searchResullt = useLoaderData();
+  console.log(searchResullt);
   return (
     <div className="container">
       <div className="counteries_temp">
-        {countries.map((country, index) => (
-          <Country key={index} data={country}></Country>
+        {searchResullt.map((country) => (
+          <Country data={country}></Country>
         ))}
       </div>
     </div>
   );
 };
 
-export default Countries;
+export default SearchPage;
