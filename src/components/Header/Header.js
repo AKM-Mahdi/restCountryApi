@@ -1,5 +1,7 @@
 import "./Header.css";
 import Search from "../../Utilities/Search";
+import { Link } from "react-router-dom";
+import logo from "../../Images/co-logo.png";
 
 const Header = () => {
   return (
@@ -7,7 +9,9 @@ const Header = () => {
       <div className="container">
         <div className="header-section">
           <div className="left">
-            <img className="logo" src="" alt="" />
+            <Link to="/">
+              <img className="logo" src={logo} alt="" />
+            </Link>
           </div>
           <div className="mid text-light">
             <span>Countries Rest api </span>
