@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./country.css";
 
 const Country = (props) => {
-  console.log(props.data);
+  // console.log(props.data);
   const {
     name: { common: countryName },
     capital: capitalOfCountry,
@@ -26,6 +27,7 @@ const Country = (props) => {
           <span className="title">Regions: </span>
           {region}
         </p>
+        <Link to={`/country/${countryName}`}>See More</Link>
       </div>
     </div>
   );

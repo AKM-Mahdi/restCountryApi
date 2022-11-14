@@ -1,0 +1,8 @@
+.card {
+  width: 350px;
+  padding: 10px;
+  margin: 30px auto;
+}
+.card h3 {
+  padding-top: 10px;
+}
